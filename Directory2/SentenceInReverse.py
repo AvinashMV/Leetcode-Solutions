@@ -1,6 +1,9 @@
 class ReverseSentence:
 
     def Rev(self,str):
+        '''
+        param str: string
+        '''
         strlist= str.split(" ")
         strlist_rev=strlist[::-1]  # to reverse a list.
         strlist_rev_rev=[i[::-1] for i in strlist_rev] # to reverse each word in the list.
