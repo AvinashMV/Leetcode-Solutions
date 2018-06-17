@@ -19,16 +19,15 @@ class Solution(object):
         buffer_list = []
         for i in str:
             if i != '?':
-                [j.append(i) for j in
-                 final_list]                # you can do this. You don't have assign final [] to something always.
+                [j.append(i) for j in final_list]   # You don't have assign [] to something always.
             else:
                 buffer_list.clear()
-                for j in final_list:         # when iterating somelist, do not change it inside the loop.
-                    temp = j[:]
+                for j in final_list:               # when iterating somelist, do not change it inside the loop.
+                    temp = j[:]                    # Put new combination in temp and to buffer list.
                     j.append('0')
                     temp.append('1')
                     buffer_list.append(temp)
-                final_list = final_list + buffer_list
+                final_list = final_list + buffer_list  # add whatever in buffer_list back to final_list
 
         print(final_list)
 
